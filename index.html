@@ -4,11 +4,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD-231 CHUT ACHOL</title>
+    <meta name="description" content="WDD231 Course Home Page - Student portfolio and course information">
+    <meta name="author" content="Student Name">
+    <title>WDD231 Course Home Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css" media="(min-width: 768px)">
+    <link rel="icon" href="images/favicon.ico">
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/courses.js" defer></script>
+    <script src="scripts/main.js" defer></script>
 </head>
 
 <body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo-link">
+                <img src="images/logo.svg" alt="Site Logo" width="50" height="50">
+                <span>Student Name</span>
+            </a>
+            <button class="hamburger" aria-label="Menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </header>
 
+    <nav class="navigation">
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+            <li class="nav-item"><a href="chamber.html" class="nav-link">Chamber</a></li>
+            <li class="nav-item"><a href="final.html" class="nav-link">Final</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Home</h1>
+
+        <section class="about-section">
+            <h2>About Me</h2>
+            <p>Massa Facilisis Per Purus Si Imperdiet Curae Armet. Et Fames Lorem Mi Phasellus Congue Nascetur Enim
+                Consectetur Sociosqu Natoque Risus. Odio Vehicula Libero Nisl Viverra Augue Commodo Pretium Vivamus At
+                Duis Magna. Quam Fringilla Convallis Ridiculus Malesuada Accumsan Potenti Magnis Volutpat Nulla Ipsum.
+                Dis Maecenas Et Praesent Class Fringilla.</p>
+        </section>
+
+        <section class="photo-section">
+            <h2>Student Photo</h2>
+            <div class="photo-container">
+                <img src="images/student-photo.jpg" alt="Student Photo" width="300" height="400" loading="lazy">
+            </div>
+        </section>
+
+        <section class="courses-section">
+            <h2>Web Certificate Courses</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="wdd">WDD</button>
+                <button class="filter-btn" data-filter="cse">CSE</button>
+            </div>
+            <div class="courses-container" id="coursesContainer">
+                <!-- Courses will be dynamically inserted here -->
+            </div>
+            <div class="credits-display">
+                <p>The total credits for courses listed above is <span id="totalCredits">0</span></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/yourusername" target="_blank" rel="noopener">
+                <img src="images/github.svg" alt="GitHub" width="24" height="24">
+            </a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener">
+                <img src="images/linkedin.svg" alt="LinkedIn" width="24" height="24">
+            </a>
+        </div>
+        <div class="footer-info">
+            <p>&copy; <span id="currentYear"></span> - Student Name • Utah, USA</p>
+            <p>Last Modification: <span id="lastModified"></span></p>
+        </div>
+    </footer>
 </body>
 
 </html>
