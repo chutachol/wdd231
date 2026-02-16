@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Salt Lake City | Chamber of Commerce</title>
+    <meta name="description" content="Discover local attractions, businesses, and points of interest in Salt Lake City">
+    <meta name="author" content="Your Name">
+
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:title" content="Discover Salt Lake City">
+    <meta property="og:description" content="Explore the best attractions and businesses in Salt Lake City">
+    <meta property="og:image" content="https://chutachol.github.io/wdd231/chamber/images/og-image.jpg">
+    <meta property="og:url" content="https://chutachol.github.io/wdd231/chamber/discover.html">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo-link">
+                <div class="text-logo">
+                    <span class="logo-initials">SLC</span>
+                </div>
+                <div class="logo-text">
+                    <h1>Salt Lake City</h1>
+                    <p>Chamber of Commerce</p>
+                </div>
+            </a>
+
+            <button class="hamburger" id="hamburger-btn" aria-label="Menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+
+        <nav id="primary-nav">
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="directory.html" class="nav-link">Directory</a></li>
+                <li><a href="join.html" class="nav-link">Join</a></li>
+                <li><a href="discover.html" class="nav-link active">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="discover-main">
+        <div class="discover-header">
+            <h1>Discover Salt Lake City</h1>
+            <div class="visit-message" id="visitMessage">
+                <!-- Visit message will be inserted here by JavaScript -->
+            </div>
+        </div>
+
+        <div class="discover-grid" id="discoverGrid">
+            <!-- Cards will be loaded here by JavaScript -->
+            <p class="loading">Loading discover items...</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Salt Lake City Chamber of Commerce</h3>
+                <p>201 South Main Street</p>
+                <p>Salt Lake City, UT 84111</p>
+                <p>📞 (801) 555-1234</p>
+                <p>📧 info@slcchamber.org</p>
+            </div>
+
+            <div class="social-media">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="dev-info">
+                <p>&copy; <span id="currentYear"></span> Salt Lake City Chamber of Commerce</p>
+                <p>Your Name | WDD 231 Project</p>
+                <p>Last modified: <span id="lastModified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="scripts/navigation.js"></script>
+    <script src="scripts/date.js"></script>
+    <script type="module" src="scripts/discover.js"></script>
+</body>
+
+</html>
