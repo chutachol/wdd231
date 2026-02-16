@@ -1,53 +1,54 @@
 @media (min-width: 768px) {
+
     /* Hide hamburger on larger screens */
     .hamburger {
         display: none;
     }
-    
+
     /* Navigation for desktop */
     .navigation {
         position: static;
         display: block;
         background-color: var(--secondary-color);
     }
-    
+
     .nav-menu {
         display: flex;
         justify-content: center;
         max-width: 1200px;
         margin: 0 auto;
     }
-    
+
     .nav-menu li {
         border: none;
     }
-    
+
     .nav-link {
         padding: 1rem 2rem;
     }
-    
+
     .nav-link:hover,
     .nav-link.active {
         background-color: var(--accent-color);
     }
-    
+
     /* Grid layout for members */
     .members-container.grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     /* Footer layout */
     .footer-content {
         display: grid;
         grid-template-columns: 2fr 1fr;
         gap: 3rem;
     }
-    
+
     .social-media {
         grid-column: 2;
         grid-row: 1;
     }
-    
+
     .dev-info {
         grid-column: 1 / -1;
         text-align: left;
@@ -55,22 +56,24 @@
 }
 
 @media (min-width: 1024px) {
+
     /* Three column grid for members */
     .members-container.grid {
         grid-template-columns: repeat(3, 1fr);
     }
-    
+
     /* Enhanced footer layout */
     .footer-content {
         grid-template-columns: 2fr 1fr 1fr;
     }
-    
+
     .social-media {
         grid-column: auto;
     }
 }
 
 @media (min-width: 1200px) {
+
     /* Center content with max-width */
     .header-container,
     .nav-menu,
@@ -80,7 +83,7 @@
         margin-left: auto;
         margin-right: auto;
     }
-    
+
     /* Four column grid for very wide screens */
     .members-container.grid {
         grid-template-columns: repeat(4, 1fr);
@@ -94,11 +97,11 @@
         align-items: center;
         gap: 2rem;
     }
-    
+
     .members-container.list .member-info {
         flex: 1;
     }
-    
+
     .members-container.list .member-details {
         display: flex;
         gap: 2rem;
@@ -109,31 +112,32 @@
 
 /* Large View Styles for Home Page */
 @media screen and (min-width: 768px) {
+
     /* Hero Section */
     .hero-content h2 {
         font-size: 2.5rem;
     }
-    
+
     .hero-content p {
         font-size: 1.2rem;
     }
-    
+
     /* Events Section */
     .events-container {
         grid-template-columns: repeat(3, 1fr);
     }
-    
+
     /* Weather Section */
     .weather-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 2rem;
     }
-    
+
     .current-weather {
         margin-bottom: 0;
     }
-    
+
     /* Spotlights Section */
     .spotlights-container {
         grid-template-columns: repeat(3, 1fr);
@@ -143,5 +147,106 @@
 @media screen and (min-width: 1024px) {
     .hero {
         height: 70vh;
+    }
+}
+
+/* Large Screens (1025px and above) */
+@media screen and (min-width: 1025px) {
+    .discover-grid {
+        grid-template-areas:
+            "card1 card2 card3"
+            "card4 card5 card6"
+            "card7 card8 card8";
+        gap: 2rem;
+    }
+
+    /* Assign grid areas */
+    .discover-card:nth-child(1) {
+        grid-area: card1;
+    }
+
+    .discover-card:nth-child(2) {
+        grid-area: card2;
+    }
+
+    .discover-card:nth-child(3) {
+        grid-area: card3;
+    }
+
+    .discover-card:nth-child(4) {
+        grid-area: card4;
+    }
+
+    .discover-card:nth-child(5) {
+        grid-area: card5;
+    }
+
+    .discover-card:nth-child(6) {
+        grid-area: card6;
+    }
+
+    .discover-card:nth-child(7) {
+        grid-area: card7;
+    }
+
+    .discover-card:nth-child(8) {
+        grid-area: card8;
+    }
+
+    /* Image hover effect (only on large screens) */
+    .card-image {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .card-image img {
+        transition: transform 0.5s, filter 0.5s;
+    }
+
+    .card-image:hover img {
+        transform: scale(1.05);
+        filter: brightness(1.1) contrast(1.1);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Optional overlay effect */
+    .card-image::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, rgba(52, 152, 219, 0.2) 0%, rgba(44, 62, 80, 0.2) 100%);
+        opacity: 0;
+        transition: opacity 0.5s;
+        pointer-events: none;
+    }
+
+    .card-image:hover::after {
+        opacity: 1;
+    }
+
+    /* Make last card span 2 columns for visual interest */
+    .discover-card:last-child {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+
+    .discover-card:last-child h2 {
+        grid-column: 1 / -1;
+    }
+
+    .discover-card:last-child .card-image {
+        grid-column: 1;
+    }
+
+    .discover-card:last-child address,
+    .discover-card:last-child .card-description,
+    .discover-card:last-child .card-category,
+    .discover-card:last-child .learn-more-btn {
+        grid-column: 2;
+        padding-left: 1rem;
     }
 }

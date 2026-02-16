@@ -1,0 +1,45 @@
+/* Medium Screens (641px to 1024px) */
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+    .discover-grid {
+        grid-template-areas: 
+            "card1 card2"
+            "card3 card4"
+            "card5 card6"
+            "card7 card8";
+        gap: 1.5rem;
+    }
+    
+    /* Alternative layout for medium screens */
+    .discover-card:nth-child(1) { grid-area: card1; }
+    .discover-card:nth-child(2) { grid-area: card2; }
+    .discover-card:nth-child(3) { grid-area: card3; }
+    .discover-card:nth-child(4) { grid-area: card4; }
+    .discover-card:nth-child(5) { grid-area: card5; }
+    .discover-card:nth-child(6) { grid-area: card6; }
+    .discover-card:nth-child(7) { grid-area: card7; }
+    .discover-card:nth-child(8) { grid-area: card8; }
+    
+    /* Featured card style for first card in medium view */
+    .discover-card:first-child {
+        grid-column: span 2;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+    
+    .discover-card:first-child h2 {
+        grid-column: 1 / -1;
+    }
+    
+    .discover-card:first-child .card-image {
+        grid-column: 1;
+    }
+    
+    .discover-card:first-child address,
+    .discover-card:first-child .card-description,
+    .discover-card:first-child .card-category,
+    .discover-card:first-child .learn-more-btn {
+        grid-column: 2;
+        padding-left: 0;
+    }
+}
