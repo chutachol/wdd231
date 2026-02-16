@@ -406,3 +406,452 @@ footer {
         font-size: 1.2rem;
     }
 }
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    min-height: 400px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+}
+
+.hero-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.hero-content p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--secondary-color, #3498db);
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: var(--primary-color, #2c3e50);
+}
+
+/* Events Section */
+.events {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.events h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color, #2c3e50);
+}
+
+.events-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.event-card {
+    background: var(--light-bg, #f8f9fa);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow, 0 2px 5px rgba(0, 0, 0, 0.1));
+    border-left: 4px solid var(--secondary-color, #3498db);
+}
+
+.event-card h3 {
+    color: var(--primary-color, #2c3e50);
+    margin: 0 0 0.5rem 0;
+}
+
+.event-date {
+    font-weight: bold;
+    color: var(--secondary-color, #3498db);
+    margin: 0.5rem 0;
+}
+
+.event-location {
+    font-style: italic;
+    margin: 0.5rem 0;
+}
+
+/* Weather Section */
+.weather {
+    background: var(--light-bg, #f8f9fa);
+    padding: 2rem 1rem;
+}
+
+.weather h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color, #2c3e50);
+}
+
+.weather-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.current-weather {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow, 0 2px 5px rgba(0, 0, 0, 0.1));
+}
+
+.weather-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.weather-temp {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color, #2c3e50);
+}
+
+.weather-desc {
+    text-align: center;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    margin-bottom: 0.5rem;
+}
+
+.weather-details {
+    text-align: center;
+    color: #666;
+}
+
+.forecast {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow, 0 2px 5px rgba(0, 0, 0, 0.1));
+}
+
+.forecast h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--primary-color, #2c3e50);
+}
+
+.forecast-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.forecast-day {
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.forecast-day-name {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.forecast-temp {
+    font-size: 1.1rem;
+    color: var(--secondary-color, #3498db);
+}
+
+/* Spotlights Section */
+.spotlights {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.spotlights h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color, #2c3e50);
+}
+
+.spotlights-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.spotlight-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow, 0 2px 5px rgba(0, 0, 0, 0.1));
+    border-top: 4px solid;
+}
+
+.spotlight-card.gold {
+    border-top-color: #f1c40f;
+}
+
+.spotlight-card.silver {
+    border-top-color: #95a5a6;
+}
+
+.spotlight-header {
+    background: var(--light-bg, #f8f9fa);
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.spotlight-header img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.spotlight-header h3 {
+    margin: 0;
+    color: var(--primary-color, #2c3e50);
+}
+
+.spotlight-content {
+    padding: 1.5rem;
+}
+
+.membership-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.membership-badge.gold {
+    background-color: #f1c40f;
+    color: var(--dark-text, #333);
+}
+
+.membership-badge.silver {
+    background-color: #95a5a6;
+    color: white;
+}
+
+.spotlight-address,
+.spotlight-phone,
+.spotlight-website {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+.spotlight-website a {
+    color: var(--secondary-color, #3498db);
+    text-decoration: none;
+}
+
+.spotlight-website a:hover {
+    text-decoration: underline;
+}
+
+.spotlight-description {
+    margin-top: 1rem;
+    font-style: italic;
+    color: #666;
+}
+
+/* Add to small.css */
+.no-image {
+    display: flex;
+    width: 80px;
+    height: 80px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.spotlight-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Spotlights Section - Add to your existing CSS */
+.spotlights {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.spotlights h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color, #2c3e50);
+}
+
+.spotlights-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.spotlight-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow, 0 2px 5px rgba(0, 0, 0, 0.1));
+    border-top: 4px solid;
+    transition: transform 0.3s;
+}
+
+.spotlight-card:hover {
+    transform: translateY(-5px);
+}
+
+.spotlight-card.gold {
+    border-top-color: #f1c40f;
+}
+
+.spotlight-card.silver {
+    border-top-color: #95a5a6;
+}
+
+.spotlight-header {
+    background: var(--light-bg, #f8f9fa);
+    padding: 1.5rem;
+    text-align: center;
+    position: relative;
+}
+
+.spotlight-header img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 3px solid white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.no-image {
+    width: 100px;
+    height: 100px;
+    background: #e0e0e0;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #666;
+}
+
+.spotlight-header h3 {
+    margin: 0;
+    color: var(--primary-color, #2c3e50);
+    font-size: 1.2rem;
+}
+
+.spotlight-content {
+    padding: 1.5rem;
+}
+
+.membership-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.membership-badge.gold {
+    background-color: #f1c40f;
+    color: #333;
+}
+
+.membership-badge.silver {
+    background-color: #95a5a6;
+    color: white;
+}
+
+.spotlight-address,
+.spotlight-phone,
+.spotlight-website {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.spotlight-website a {
+    color: var(--secondary-color, #3498db);
+    text-decoration: none;
+    word-break: break-all;
+}
+
+.spotlight-website a:hover {
+    text-decoration: underline;
+}
+
+.spotlight-description {
+    margin-top: 1rem;
+    font-style: italic;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Responsive for larger screens */
+@media screen and (min-width: 768px) {
+    .spotlights-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .spotlights-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.error {
+    color: #e74c3c;
+    text-align: center;
+    padding: 2rem;
+    background: #fdf3f2;
+    border-radius: 8px;
+}

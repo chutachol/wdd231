@@ -104,3 +104,44 @@
         gap: 2rem;
     }
 }
+
+
+
+/* Large View Styles for Home Page */
+@media screen and (min-width: 768px) {
+    /* Hero Section */
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+    
+    /* Events Section */
+    .events-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    /* Weather Section */
+    .weather-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+    
+    .current-weather {
+        margin-bottom: 0;
+    }
+    
+    /* Spotlights Section */
+    .spotlights-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .hero {
+        height: 70vh;
+    }
+}
