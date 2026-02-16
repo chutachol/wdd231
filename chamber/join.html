@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the Chamber | Salt Lake City Chamber of Commerce</title>
+    <meta name="description" content="Join the Salt Lake City Chamber of Commerce - Membership application form">
+    <meta name="author" content="Your Name">
+
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:title" content="Join Salt Lake City Chamber of Commerce">
+    <meta property="og:description" content="Apply for membership and join our business community">
+    <meta property="og:image" content="https://chutachol.github.io/wdd231/chamber/images/og-image.jpg">
+    <meta property="og:url" content="https://chutachol.github.io/wdd231/chamber/join.html">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo-link">
+                <div class="text-logo">
+                    <span class="logo-initials">SLC</span>
+                </div>
+                <div class="logo-text">
+                    <h1>Salt Lake City</h1>
+                    <p>Chamber of Commerce</p>
+                </div>
+            </a>
+
+            <button class="hamburger" id="hamburger-btn" aria-label="Menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+
+        <nav id="primary-nav">
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="directory.html" class="nav-link">Directory</a></li>
+                <li><a href="join.html" class="nav-link active">Join</a></li>
+                <li><a href="discover.html" class="nav-link">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="join-main">
+        <h1 class="page-title">Membership Application</h1>
+
+        <div class="join-layout">
+            <!-- Form Section -->
+            <section class="form-section">
+                <h2>Apply for Membership</h2>
+                <p>Fill out the form below to join the Salt Lake City Chamber of Commerce.</p>
+
+                <form method="get" action="thankyou.html" id="membershipForm">
+                    <!-- First Name -->
+                    <label>
+                        <span>First Name *</span>
+                        <input type="text" name="firstname" id="firstname" title="Enter your first name"
+                            autocomplete="given-name" required>
+                    </label>
+
+                    <!-- Last Name -->
+                    <label>
+                        <span>Last Name *</span>
+                        <input type="text" name="lastname" id="lastname" title="Enter your last name"
+                            autocomplete="family-name" required>
+                    </label>
+
+                    <!-- Organizational Title -->
+                    <label>
+                        <span>Organizational Title *</span>
+                        <input type="text" name="orgtitle" id="orgtitle"
+                            title="Enter your position/title within your organization" autocomplete="organization-title"
+                            pattern="[A-Za-z\- ]{7,}" placeholder="e.g., CEO, Manager, Director" required>
+                        <small>Minimum 7 characters: letters, hyphens, and spaces only</small>
+                    </label>
+
+                    <!-- Email Address -->
+                    <label>
+                        <span>Email Address *</span>
+                        <input type="email" name="email" id="email" title="Enter your email address"
+                            autocomplete="email" placeholder="yourname@example.com" required>
+                    </label>
+
+                    <!-- Mobile Phone -->
+                    <label>
+                        <span>Mobile Phone Number *</span>
+                        <input type="tel" name="phone" id="phone" title="Enter your mobile phone number"
+                            autocomplete="tel" placeholder="(801) 555-1234" required>
+                    </label>
+
+                    <!-- Business/Organization Name -->
+                    <label>
+                        <span>Business/Organization Name *</span>
+                        <input type="text" name="organization" id="organization"
+                            title="Enter your business or organization name" autocomplete="organization" required>
+                    </label>
+
+                    <!-- Membership Level -->
+                    <label>
+                        <span>Membership Level *</span>
+                        <select name="membership" id="membership" required>
+                            <option value="" disabled selected>Select a membership level</option>
+                            <option value="np">NP Membership (Non-Profit) - No Fee</option>
+                            <option value="bronze">Bronze Membership</option>
+                            <option value="silver">Silver Membership</option>
+                            <option value="gold">Gold Membership</option>
+                        </select>
+                    </label>
+
+                    <!-- Business Description -->
+                    <label>
+                        <span>Business/Organization Description</span>
+                        <textarea name="description" id="description" title="Describe your business or organization"
+                            rows="4" placeholder="Tell us about your business, products, services, etc."></textarea>
+                    </label>
+
+                    <!-- Timestamp (Hidden) -->
+                    <input type="hidden" name="timestamp" id="timestamp">
+
+                    <!-- Submit Button -->
+                    <input type="submit" value="Submit Application" class="submit-btn">
+                </form>
+            </section>
+
+            <!-- Membership Cards Section -->
+            <aside class="membership-cards">
+                <h2>Membership Levels</h2>
+                <p>Click on each level to see benefits</p>
+
+                <div class="cards-container">
+                    <!-- NP Membership Card -->
+                    <div class="membership-card np-card">
+                        <h3>NP Membership</h3>
+                        <p class="price">No Fee</p>
+                        <p class="target">For Non-Profit Organizations</p>
+                        <button class="view-benefits-btn" data-modal="np-modal">View Benefits →</button>
+                    </div>
+
+                    <!-- Bronze Membership Card -->
+                    <div class="membership-card bronze-card">
+                        <h3>Bronze Membership</h3>
+                        <p class="price">$250/year</p>
+                        <p class="target">For Small Businesses</p>
+                        <button class="view-benefits-btn" data-modal="bronze-modal">View Benefits →</button>
+                    </div>
+
+                    <!-- Silver Membership Card -->
+                    <div class="membership-card silver-card">
+                        <h3>Silver Membership</h3>
+                        <p class="price">$500/year</p>
+                        <p class="target">For Growing Companies</p>
+                        <button class="view-benefits-btn" data-modal="silver-modal">View Benefits →</button>
+                    </div>
+
+                    <!-- Gold Membership Card -->
+                    <div class="membership-card gold-card">
+                        <h3>Gold Membership</h3>
+                        <p class="price">$1,000/year</p>
+                        <p class="target">For Established Enterprises</p>
+                        <button class="view-benefits-btn" data-modal="gold-modal">View Benefits →</button>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Modals -->
+        <!-- NP Modal -->
+        <div id="np-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>NP Membership Benefits</h2>
+                <h3>For Non-Profit Organizations (No Fee)</h3>
+                <ul class="benefits-list">
+                    <li>✓ Listing in online directory</li>
+                    <li>✓ Monthly networking events</li>
+                    <li>✓ Newsletter subscription</li>
+                    <li>✓ 1 member spotlight per year</li>
+                    <li>✓ Access to member resources</li>
+                </ul>
+                <p><strong>Perfect for:</strong> Non-profit organizations serving our community</p>
+            </div>
+        </div>
+
+        <!-- Bronze Modal -->
+        <div id="bronze-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Bronze Membership Benefits</h2>
+                <h3>$250/year</h3>
+                <ul class="benefits-list">
+                    <li>✓ All NP benefits</li>
+                    <li>✓ 2 member spotlights per year</li>
+                    <li>✓ 10% discount on event tickets</li>
+                    <li>✓ Basic advertising in newsletter</li>
+                    <li>✓ Social media shoutout (quarterly)</li>
+                </ul>
+                <p><strong>Perfect for:</strong> Small businesses and startups</p>
+            </div>
+        </div>
+
+        <!-- Silver Modal -->
+        <div id="silver-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Silver Membership Benefits</h2>
+                <h3>$500/year</h3>
+                <ul class="benefits-list">
+                    <li>✓ All Bronze benefits</li>
+                    <li>✓ 4 member spotlights per year</li>
+                    <li>✓ 20% discount on event tickets</li>
+                    <li>✓ Featured in weekly email</li>
+                    <li>✓ Social media shoutout (monthly)</li>
+                    <li>✓ Access to exclusive workshops</li>
+                </ul>
+                <p><strong>Perfect for:</strong> Growing companies ready to expand</p>
+            </div>
+        </div>
+
+        <!-- Gold Modal -->
+        <div id="gold-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Gold Membership Benefits</h2>
+                <h3>$1,000/year</h3>
+                <ul class="benefits-list">
+                    <li>✓ All Silver benefits</li>
+                    <li>✓ Unlimited member spotlights</li>
+                    <li>✓ 30% discount on event tickets</li>
+                    <li>✓ Premium placement in directory</li>
+                    <li>✓ Social media shoutout (weekly)</li>
+                    <li>✓ Free admission to all workshops</li>
+                    <li>✓ Annual business consultation</li>
+                </ul>
+                <p><strong>Perfect for:</strong> Established enterprises seeking maximum exposure</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Salt Lake City Chamber of Commerce</h3>
+                <p>201 South Main Street</p>
+                <p>Salt Lake City, UT 84111</p>
+                <p>📞 (801) 555-1234</p>
+                <p>📧 info@slcchamber.org</p>
+            </div>
+
+            <div class="social-media">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="dev-info">
+                <p>&copy; <span id="currentYear"></span> Salt Lake City Chamber of Commerce</p>
+                <p>Your Name | WDD 231 Project</p>
+                <p>Last modified: <span id="lastModified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- JavaScript Files -->
+    <script src="scripts/navigation.js"></script>
+    <script src="scripts/date.js"></script>
+    <script src="scripts/join.js"></script>
+</body>
+
+</html>

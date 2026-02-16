@@ -855,3 +855,412 @@ footer {
     background: #fdf3f2;
     border-radius: 8px;
 }
+
+/* Join Page Styles */
+.join-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color, #2c3e50);
+}
+
+.join-layout {
+    display: block;
+}
+
+/* Form Section */
+.form-section {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow, 0 2px 5px rgba(0,0,0,0.1));
+    margin-bottom: 2rem;
+}
+
+.form-section h2 {
+    color: var(--primary-color, #2c3e50);
+    margin-top: 0;
+}
+
+form label {
+    display: block;
+    margin-bottom: 1.5rem;
+}
+
+form label span {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-weight: bold;
+    color: var(--primary-color, #2c3e50);
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color, #3498db);
+    box-shadow: 0 0 5px rgba(52,152,219,0.3);
+}
+
+form small {
+    display: block;
+    color: #666;
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+}
+
+.submit-btn {
+    background-color: var(--secondary-color, #3498db);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: var(--primary-color, #2c3e50);
+}
+
+/* Membership Cards */
+.membership-cards {
+    background: var(--light-bg, #f8f9fa);
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.membership-cards h2 {
+    color: var(--primary-color, #2c3e50);
+    margin-top: 0;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.membership-card {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: var(--shadow, 0 2px 5px rgba(0,0,0,0.1));
+    border-top: 4px solid;
+    transition: transform 0.3s;
+}
+
+/* Animation for cards */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.membership-card:hover {
+    transform: translateY(-5px);
+}
+
+.np-card {
+    border-top-color: #27ae60;
+}
+
+.bronze-card {
+    border-top-color: #e67e22;
+}
+
+.silver-card {
+    border-top-color: #95a5a6;
+}
+
+.gold-card {
+    border-top-color: #f1c40f;
+}
+
+.membership-card h3 {
+    margin: 0 0 0.5rem;
+    color: var(--primary-color, #2c3e50);
+}
+
+.membership-card .price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.np-card .price {
+    color: #27ae60;
+}
+
+.bronze-card .price {
+    color: #e67e22;
+}
+
+.silver-card .price {
+    color: #7f8c8d;
+}
+
+.gold-card .price {
+    color: #f39c12;
+}
+
+.membership-card .target {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.view-benefits-btn {
+    background: none;
+    border: none;
+    color: var(--secondary-color, #3498db);
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s;
+}
+
+.view-benefits-btn:hover {
+    color: var(--primary-color, #2c3e50);
+    text-decoration: underline;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    animation: slideDown 0.3s;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.close-modal {
+    position: absolute;
+    right: 1rem;
+    top: 0.5rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.3s;
+}
+
+.close-modal:hover {
+    color: #333;
+}
+
+.modal-content h2 {
+    color: var(--primary-color, #2c3e50);
+    margin-top: 0;
+}
+
+.modal-content h3 {
+    color: var(--secondary-color, #3498db);
+    margin-bottom: 1rem;
+}
+
+.benefits-list {
+    list-style: none;
+    padding: 0;
+}
+
+.benefits-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.benefits-list li:last-child {
+    border-bottom: none;
+}
+
+/* Thank You Page */
+.thankyou-main {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.thankyou-container {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: var(--shadow, 0 2px 5px rgba(0,0,0,0.1));
+    max-width: 800px;
+    width: 100%;
+}
+
+.thankyou-container h1 {
+    color: var(--primary-color, #2c3e50);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.thankyou-message {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: var(--light-bg, #f8f9fa);
+    border-radius: 4px;
+}
+
+.application-summary {
+    margin-bottom: 2rem;
+}
+
+.application-summary h2 {
+    color: var(--primary-color, #2c3e50);
+    margin-bottom: 1rem;
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    background: var(--light-bg, #f8f9fa);
+    padding: 1.5rem;
+    border-radius: 4px;
+}
+
+.summary-item {
+    padding: 0.5rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.summary-item:last-child {
+    border-bottom: none;
+}
+
+.summary-item strong {
+    color: var(--primary-color, #2c3e50);
+    min-width: 150px;
+    display: inline-block;
+}
+
+.next-steps {
+    background: #e8f4fd;
+    padding: 1.5rem;
+    border-radius: 4px;
+    margin-bottom: 2rem;
+}
+
+.next-steps h3 {
+    color: var(--primary-color, #2c3e50);
+    margin-top: 0;
+}
+
+.next-steps ol {
+    margin-bottom: 0;
+}
+
+.next-steps li {
+    margin-bottom: 0.5rem;
+}
+
+.return-home-btn {
+    display: inline-block;
+    background-color: var(--secondary-color, #3498db);
+    color: white;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.return-home-btn:hover {
+    background-color: var(--primary-color, #2c3e50);
+}
+
+/* Responsive Design */
+@media screen and (min-width: 768px) {
+    .join-layout {
+        display: grid;
+        grid-template-columns: 1fr 350px;
+        gap: 2rem;
+    }
+    
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .summary-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .summary-item {
+        border-bottom: none;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .return-home-btn {
+        width: auto;
+        display: inline-block;
+    }
+}

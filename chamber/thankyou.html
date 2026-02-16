@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Salt Lake City Chamber of Commerce</title>
+    <meta name="description" content="Thank you for applying to join the Salt Lake City Chamber of Commerce">
+    <meta name="author" content="Your Name">
+
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:title" content="Thank You - Salt Lake City Chamber">
+    <meta property="og:description" content="Your membership application has been received">
+    <meta property="og:image" content="https://chutachol.github.io/wdd231/chamber/images/og-image.jpg">
+    <meta property="og:url" content="https://chutachol.github.io/wdd231/chamber/thankyou.html">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo-link">
+                <div class="text-logo">
+                    <span class="logo-initials">SLC</span>
+                </div>
+                <div class="logo-text">
+                    <h1>Salt Lake City</h1>
+                    <p>Chamber of Commerce</p>
+                </div>
+            </a>
+
+            <button class="hamburger" id="hamburger-btn" aria-label="Menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+
+        <nav id="primary-nav">
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="directory.html" class="nav-link">Directory</a></li>
+                <li><a href="join.html" class="nav-link">Join</a></li>
+                <li><a href="discover.html" class="nav-link">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="thankyou-main">
+        <div class="thankyou-container">
+            <h1>Thank You for Your Application!</h1>
+            <p class="thankyou-message">Your membership application has been received. We'll review your information and
+                contact you within 2-3 business days.</p>
+
+            <div class="application-summary">
+                <h2>Application Summary</h2>
+
+                <div class="summary-grid" id="summaryGrid">
+                    <!-- Summary will be populated by JavaScript -->
+                    <p>Loading your information...</p>
+                </div>
+            </div>
+
+            <div class="next-steps">
+                <h3>Next Steps:</h3>
+                <ol>
+                    <li>Check your email for a confirmation message</li>
+                    <li>Our team will review your application</li>
+                    <li>You'll receive membership details within 2-3 business days</li>
+                </ol>
+            </div>
+
+            <a href="index.html" class="return-home-btn">Return to Home Page</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Salt Lake City Chamber of Commerce</h3>
+                <p>201 South Main Street</p>
+                <p>Salt Lake City, UT 84111</p>
+                <p>📞 (801) 555-1234</p>
+                <p>📧 info@slcchamber.org</p>
+            </div>
+
+            <div class="social-media">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="dev-info">
+                <p>&copy; <span id="currentYear"></span> Salt Lake City Chamber of Commerce</p>
+                <p>Your Name | WDD 231 Project</p>
+                <p>Last modified: <span id="lastModified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="scripts/navigation.js"></script>
+    <script src="scripts/date.js"></script>
+    <script src="scripts/thankyou.js"></script>
+</body>
+
+</html>
