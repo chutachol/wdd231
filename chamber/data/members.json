@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Alpine Outfitters",
+        "address": "123 Mountain View Dr, Salt Lake City, UT 84101",
+        "phone": "(801) 555-0123",
+        "website": "https://alpineoutfitters.com",
+        "image": "business1.jfif",
+        "membership": 3,
+        "industry": "Outdoor Gear",
+        "description": "Premium outdoor equipment and clothing for adventurers"
+    },
+    {
+        "name": "Wasatch Tech Solutions",
+        "address": "456 Silicon Way, Salt Lake City, UT 84102",
+        "phone": "(801) 555-0234",
+        "website": "https://wasatchtech.com",
+        "image": "business2.jfif",
+        "membership": 2,
+        "industry": "Technology",
+        "description": "Custom software development and IT consulting"
+    },
+    {
+        "name": "Red Rock Cafe",
+        "address": "789 Canyon Blvd, Salt Lake City, UT 84103",
+        "phone": "(801) 555-0345",
+        "website": "https://redrockcafe.com",
+        "image": "business3.jfif",
+        "membership": 1,
+        "industry": "Restaurant",
+        "description": "Local coffee shop with artisanal brews and pastries"
+    },
+    {
+        "name": "Summit Construction",
+        "address": "321 Builder's Ave, Salt Lake City, UT 84104",
+        "phone": "(801) 555-0456",
+        "website": "https://summitconstruction.com",
+        "image": "business4.jfif",
+        "membership": 3,
+        "industry": "Construction",
+        "description": "Commercial and residential construction services"
+    },
+    {
+        "name": "Urban Wellness Clinic",
+        "address": "654 Health St, Salt Lake City, UT 84105",
+        "phone": "(801) 555-0567",
+        "website": "https://urbanwellness.com",
+        "image": "business5.jfif",
+        "membership": 2,
+        "industry": "Healthcare",
+        "description": "Integrated health and wellness services"
+    },
+    {
+        "name": "Desert Bloom Floral",
+        "address": "987 Garden Ln, Salt Lake City, UT 84106",
+        "phone": "(801) 555-0678",
+        "website": "https://desertbloomfloral.com",
+        "image": "business6.jfif",
+        "membership": 1,
+        "industry": "Florist",
+        "description": "Floral arrangements for all occasions"
+    },
+    {
+        "name": "Great Salt Financial",
+        "address": "147 Investment Dr, Salt Lake City, UT 84107",
+        "phone": "(801) 555-0789",
+        "website": "https://greatsaltfinancial.com",
+        "image": "business7.jfif",
+        "membership": 3,
+        "industry": "Finance",
+        "description": "Personal and business financial planning"
+    }
+]
