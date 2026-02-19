@@ -1,0 +1,82 @@
+[
+    {
+        "name": "Bolgol Alumni" ,
+        "address": "San Francisco, California",
+        "phone": "415-789-2345",
+        "website": "https://bolgolsportshub.com",
+        "image": "images/bolgol2.webp",
+        "Role": "Player"
+    },
+    {
+        "name": "Team One Academy",
+        "address": "Kampala, Uganda",
+        "phone": "07563669701",
+        "website": "https://teamoneacademy.com",
+        "image": "images/team1.jpeg",
+        "Role": "Team"
+    },
+    {
+        "name": "Player-Coach Network",
+        "address": "Phoenix, Arizona",
+        "phone": "602-345-6789",
+        "website": "https://playercoachnetwork.com",
+        "image": "images/player-coach.webp",
+        "Role": "Coach"
+    },
+    {
+        "name": "Erjok",
+        "address": "Nairobi, Kenya",
+        "phone": "254-712-345-678",
+        "website": "https://lisadeng.com",
+        "image": "images/lisa.webp",
+        "role": "Player"
+    },
+    {
+        "name": "Wal Deng",
+        "address": "Kampala, Uganda",
+        "phone": "256-712-345-678",
+        "website": "https://waldeng.com",
+        "image": "images/wal.webp",
+        "role": "Coach"
+    },
+    {
+        "name": "Sossa Academy",
+        "address": "Juba, South Sudan",
+        "phone": "211-912-345-678",
+        "website": "https://sossaacademy.com",
+        "image": "images/sossa.webp",
+        "role": "Team"
+    },
+    {
+        "name": "Mabil",
+        "address": "Addis Ababa, Ethiopia",
+        "phone": "251-912-345-678",
+        "website": "https://mabil.com",
+        "image": "images/mabil.webp",
+        "role": "Player"
+    },
+    {
+        "name": "Khaman",
+        "address": "Dodoma, Tanzania",
+        "phone": "255-712-345-678",
+        "website": "https://khaman.com",
+        "image": "images/khaman.webp",
+        "role": "Player"
+    },
+    {
+        "name": "Akec Woui",
+        "address": "Kigali, Rwanda",
+        "phone": "250-712-345-678",
+        "website": "https://akec.com",
+        "image": "images/akec.webp",
+        "role": "Coach"
+    },
+    {
+        "name": "Tito Deng",
+        "address": "Bujumbura, Burundi",
+        "phone": "257-712-345-678",
+        "website": "https://tito.com",
+        "image": "images/tito.webp",
+        "role": "Player"
+    }
+]

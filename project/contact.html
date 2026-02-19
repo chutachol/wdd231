@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Flight 13 for inquiries, partnerships, and recruitment opportunities.">
+    <meta name="author" content="Chut Achol">
+
+    <title>Contact Us - Flight 13</title>
+
+    <meta property="og:title" content="Flight 13 Contact-us page">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://chutachol.github.io/wdd231/project/images/ballerlogo.jpg">
+    <meta property="og:url" content="https://chutachol.github.io/wdd231/project/contact.html">
+
+    <link rel="icon" href="images/favicon.ico">
+
+    <link rel="stylesheet" href="styles/styleproject.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="left-section">
+            <img src="images/ballerlogo.jpg" alt="Flight 13 Logo" class="logo">
+            <button id="menu-toggle" class="hamburger">&#9776;</button>
+        </div>
+        <h1 class="site-title">Contact Us - Flight 13</h1>
+        <nav>
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contact-container">
+        <h2>Contact Us</h2>
+        <p>We'd love to hear from you! Whether you have questions, need assistance, or want to join our network, reach
+            out to us.</p>
+
+        <div class="contact-details">
+            <div class="contact-info">
+                <h3>📍 Our Location</h3>
+                <p>Nairobi, Kenya</p>
+            </div>
+            <div class="contact-info">
+                <h3>📞 Call Us</h3>
+                <p>+254 712 345 678</p>
+            </div>
+            <div class="contact-info">
+                <h3>✉️ Email Us</h3>
+                <p><a href="mailto:info@flight13.com">info@flight13.com</a></p>
+            </div>
+        </div>
+
+        <section class="contact-form">
+            <h2>Send Us a Message</h2>
+            <form method="post" action="thankyou.html">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" autocomplete="name" placeholder="Enter your full name"
+                    required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" autocomplete="email" placeholder="Enter your email address"
+                    required>
+
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="5" autocomplete="off" placeholder="Type your message here"
+                    required></textarea>
+
+                <button type="submit">Send Message</button>
+                <button type="reset">Clear Form</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Flight 13. All rights reserved.</p>
+        <p>Chut Achol | WDD 231</p>
+        <p>Last Updated: <span id="last-modified"></span></p>
+
+        <!-- Social Media Links -->
+        <div class="social-media">
+            <a href="https://www.facebook.com" target="_blank" class="social-icon">
+                <img src="images/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                <img src="images/instagram.jpeg" alt="Instagram">
+            </a>
+            <a href="https://www.twitter.com" target="_blank" class="social-icon">
+                <img src="images/twitter.jpeg" alt="Twitter">
+            </a>
+        </div>
+    </footer>
+
+    <script src="scripts/project.js"></script>
+
+</body>
+
+</html>
