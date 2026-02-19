@@ -16,6 +16,7 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://chutachol.github.io/wdd231/project/images/ballerlogo.jpg">
     <meta property="og:url" content="https://chutachol.github.io/wdd231/project/thankyou.html">
+    <meta property="og:description" content="Thank you for joining Flight 13 basketball network.">
 
     <link rel="canonical" href="https://chutachol.github.io/wdd231/project/thankyou.html">
     <link rel="icon" href="images/favicon.ico">
@@ -50,9 +51,18 @@
         </p>
         <p>Meanwhile, feel free to explore more on our platform:</p>
 
+        <!-- Display Submitted Form Data -->
+        <section class="submitted-data" aria-labelledby="submitted-heading">
+            <h3 id="submitted-heading">Your Submitted Information:</h3>
+            <div id="form-data-display" class="data-display">
+                <!-- Data will be inserted here dynamically -->
+            </div>
+        </section>
+
         <div class="thankyou-links">
             <a href="index.html" class="button" aria-label="Return to home page">Return Home</a>
             <a href="about.html" class="button" aria-label="Learn more about Flight 13">Learn More</a>
+            <a href="join.html" class="button" aria-label="Submit another application">Submit Another</a>
         </div>
     </main>
 
@@ -79,6 +89,86 @@
 
     <script src="scripts/project.js" defer></script>
 
+    <!-- Additional script for displaying form data -->
+    <script>
+        // Display form data from localStorage on page load
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get the saved form data from localStorage
+            const savedData = localStorage.getItem('joinFormData');
+            const displayDiv = document.getElementById('form-data-display');
+
+            if (savedData && displayDiv) {
+                try {
+                    const data = JSON.parse(savedData);
+
+                    // Format membership type for display
+                    let membershipDisplay = data.membership;
+                    if (membershipDisplay) {
+                        membershipDisplay = membershipDisplay.charAt(0).toUpperCase() + membershipDisplay.slice(1) + ' Membership';
+                    }
+
+                    // Format date if timestamp exists
+                    let dateDisplay = '';
+                    if (data.timestamp) {
+                        const submissionDate = new Date(data.timestamp);
+                        dateDisplay = submissionDate.toLocaleString();
+                    }
+
+                    // Create HTML to display the data
+                    displayDiv.innerHTML = `
+                        <div class="data-grid">
+                            <div class="data-item">
+                                <strong>Full Name:</strong> 
+                                <span>${escapeHtml(data.firstName || '')} ${escapeHtml(data.lastName || '')}</span>
+                            </div>
+                            <div class="data-item">
+                                <strong>Email Address:</strong> 
+                                <span>${escapeHtml(data.email || '')}</span>
+                            </div>
+                            <div class="data-item">
+                                <strong>Phone Number:</strong> 
+                                <span>${escapeHtml(data.phone || '')}</span>
+                            </div>
+                            <div class="data-item">
+                                <strong>Membership Type:</strong> 
+                                <span>${escapeHtml(membershipDisplay || 'Not specified')}</span>
+                            </div>
+                            <div class="data-item">
+                                <strong>Bio/Experience:</strong> 
+                                <span>${escapeHtml(data.bio || 'Not provided')}</span>
+                            </div>
+                            ${dateDisplay ? `
+                            <div class="data-item">
+                                <strong>Submitted On:</strong> 
+                                <span>${escapeHtml(dateDisplay)}</span>
+                            </div>
+                            ` : ''}
+                        </div>
+                    `;
+
+                    // Optional: Clear localStorage after displaying (uncomment if you want to clear)
+                    // localStorage.removeItem('joinFormData');
+
+                } catch (e) {
+                    console.error('Error parsing saved form data:', e);
+                    displayDiv.innerHTML = '<p class="error">Unable to display saved data.</p>';
+                }
+            } else {
+                // No data found in localStorage
+                if (displayDiv) {
+                    displayDiv.innerHTML = '<p class="no-data">No recent submission found. Please <a href="join.html">join now</a>.</p>';
+                }
+            }
+        });
+
+        // Helper function to escape HTML and prevent XSS
+        function escapeHtml(text) {
+            if (!text) return '';
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+    </script>
 </body>
 
 </html>

@@ -1128,3 +1128,101 @@ button[type="reset"]:hover {
         font-size: 1rem;
     }
 }
+
+/* Submitted Data Display Styles */
+.submitted-data {
+    background: var(--bg-white);
+    padding: 30px;
+    border-radius: 8px;
+    margin: 30px 0;
+    text-align: left;
+    border-left: 5px solid var(--accent-orange);
+    box-shadow: 0 4px 12px var(--card-shadow);
+}
+
+.submitted-data h3 {
+    color: var(--primary-dark);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--accent-orange);
+    font-size: 1.5rem;
+}
+
+.data-display {
+    background: var(--bg-light);
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.data-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.data-item {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 15px;
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.data-item:last-child {
+    border-bottom: none;
+}
+
+.data-item strong {
+    color: var(--primary-dark);
+    font-weight: 700;
+}
+
+.data-item span {
+    color: var(--text-gray);
+    line-height: 1.5;
+    word-break: break-word;
+}
+
+.no-data,
+.error {
+    text-align: center;
+    padding: 20px;
+    color: var(--text-gray);
+    font-style: italic;
+}
+
+.no-data a {
+    color: var(--accent-orange);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.no-data a:hover {
+    color: var(--accent-hover);
+}
+
+/* Responsive styles for data display */
+@media screen and (max-width: 768px) {
+    .data-item {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    .data-item strong {
+        margin-bottom: 5px;
+    }
+
+    .submitted-data {
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .submitted-data h3 {
+        font-size: 1.3rem;
+    }
+
+    .data-grid {
+        gap: 10px;
+    }
+}
