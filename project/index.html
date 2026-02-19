@@ -5,32 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Welcome to Flight 13. Our basketball platform connects players, coaches, and enthusiasts to unlock opportunities and elevate the game. We help Players showcase their skills to earn scholarships, pro contracts, and financial rewards. Coaches gain access to undiscovered talent through detailed profiles, highlight reels, and performance metrics. By fostering a global community, we level the playing field, ensuring no talent goes unnoticed. Through events, resources, and innovative tools, we empower players to achieve their dreams and help coaches build stronger teams. Together, we're redefining basketball by creating a future where talent meets opportunity, and the game thrives like never before. ">
+        content="Flight 13 - Premier basketball platform connecting players, coaches, and teams for recruitment and development opportunities worldwide.">
+    <meta name="keywords"
+        content="basketball, recruiting, players, coaches, teams, scholarships, sports platform, basketball recruitment">
     <meta name="author" content="Chut Achol">
-    <title>Flight 13 - Home</title>
+    <meta name="robots" content="index, follow">
 
-    <meta property="og:title" content="Flight 13 Homepage">
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Flight 13 - Basketball Recruitment Platform">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://chutachol.github.io/wdd231/project/images/ballerlogo.jpg">
     <meta property="og:url" content="https://chutachol.github.io/wdd231/project/index.html">
+    <meta property="og:description"
+        content="Connect with basketball opportunities worldwide. Create your profile today and get discovered by coaches and teams.">
 
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Flight 13 - Basketball Recruitment">
+    <meta name="twitter:description"
+        content="Connect with basketball opportunities worldwide. Create your profile today.">
+    <meta name="twitter:image" content="https://chutachol.github.io/wdd231/project/images/ballerlogo.jpg">
 
-    <link rel="icon" href="images/favicon.ico">
+    <link rel="canonical" href="https://chutachol.github.io/wdd231/project/index.html">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <title>Flight 13 - Home | Basketball Recruitment Platform</title>
 
     <link rel="stylesheet" href="styles/styleproject.css">
 </head>
 
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <header>
+    <header role="banner">
         <div class="left-section">
-            <img src="images/ballerlogo.jpg" alt="Flight 13 Logo" class="logo">
-            <button id="menu-toggle" class="hamburger">&#9776;</button>
+            <img src="images/ballerlogo.jpg" alt="Flight 13 Basketball Logo" class="logo" width="60" height="60"
+                loading="eager">
+            <button id="menu-toggle" class="hamburger" aria-label="Toggle navigation menu"
+                aria-expanded="false">&#9776;</button>
         </div>
         <h1 class="site-title">Flight 13 - Home</h1>
-        <nav>
+        <nav role="navigation" aria-label="Main navigation">
             <ul class="navigation">
-                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="index.html" class="active" aria-current="page">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="join.html">Join</a></li>
@@ -38,19 +55,20 @@
         </nav>
     </header>
 
-    <main>
+    <main id="main-content" role="main">
         <!-- Hero Section -->
-        <section class="hero">
-            <img src="images/olivier-nkamhoua.jpg" alt="Baller's Image" class="hero-image" loading="lazy">
+        <section class="hero" aria-label="Hero section">
+            <img src="images/olivier-nkamhoua.jpg" alt="Basketball player in action on the court" class="hero-image"
+                width="1200" height="500" loading="eager">
             <div class="hero-text">
                 <h2>Welcome to Flight 13</h2>
-                <p>Connecting basketball players, coaches, and enthusiasts.</p>
-                <a href="join.html" class="cta-button">Join the network</a>
+                <p>Connecting basketball players, coaches, and enthusiasts worldwide.</p>
+                <a href="join.html" class="cta-button" aria-label="Join Flight 13 network now">Join the network</a>
             </div>
         </section>
 
-        <section>
-            <h2>Flight 13</h2>
+        <section aria-labelledby="about-heading">
+            <h2 id="about-heading">Flight 13</h2>
             <p><strong>Flight 13</strong> Our basketball platform connects players, coaches, and enthusiasts to unlock
                 opportunities and elevate the game. We help <strong>players</strong> showcase their skills to earn
                 scholarships, pro contracts, and financial rewards. <strong>Coaches</strong> gain access to undiscovered
@@ -61,13 +79,11 @@
                 thrives like never before.</p>
         </section>
 
+        <section class="Choice" aria-labelledby="why-choose-heading">
+            <h2 id="why-choose-heading">Why Choose Flight 13?</h2>
 
-        <section class="Choice">
-            <h2>Why Choose Flight 13?</h2>
+            <h3>For The Players</h3>
             <ul>
-                <strong>For The Players; </strong>
-                <p> </p>
-
                 <li><strong>Unlock Your Potential:</strong> Train with the best academies, earn scholarships, and secure
                     contracts with top teams.</li>
                 <li><strong>Life Skills:</strong> Learn teamwork, leadership, goal setting, work ethic, time management,
@@ -76,10 +92,10 @@
                     friendships, and partnerships.</li>
                 <li><strong>Healthier Lifestyle:</strong> Stay active, boost immunity, and improve overall physical and
                     mental well-being.</li>
-                <p> </p>
-                <strong>For The Coaches And Teams </strong>
-                <p> </p>
+            </ul>
 
+            <h3>For The Coaches And Teams</h3>
+            <ul>
                 <li><strong>Discover Hidden Talent:</strong> Access players from underserved areas who lack exposure but
                     have immense potential.</li>
                 <li><strong>Identify Gaps:</strong> Find the right players to fill roster gaps and build a stronger,
@@ -92,23 +108,20 @@
                     that transforms lives through basketball.</strong></p>
         </section>
 
-        <section class="scenario">
+        <section class="scenario" aria-labelledby="scenarios-heading">
             <div class="overlay">
-                <h2>Scenarios</h2>
+                <h2 id="scenarios-heading">Scenarios</h2>
                 <ul>
                     <li>Where can I find basketball training tips and drills?</li>
                     <li>How do I connect with local teams and leagues?</li>
                 </ul>
             </div>
-            <img src="images/training-ground.webp" alt="Ballers Ground" class="trainingground-image" loading="lazy">
+            <img src="images/training-ground.webp" alt="Basketball training facility with players practicing"
+                class="trainingground-image" width="1200" height="450" loading="lazy">
         </section>
 
-
-
-
-
-        <section class="recruiting-video">
-            <h2>How to Create a Winning Basketball Recruiting Video</h2>
+        <section class="recruiting-video" aria-labelledby="video-heading">
+            <h2 id="video-heading">How to Create a Winning Basketball Recruiting Video</h2>
             <p>Creating a standout recruiting video is crucial to catching the attention of coaches and scouts. Follow
                 these steps to ensure your video highlights your skills effectively:</p>
 
@@ -170,41 +183,47 @@
                     it happen!</strong></p>
         </section>
 
-
         <!-- Recruiting Profile Section -->
-        <section class="recruiting-profile">
-            <img src="images/recruit-profile.jpg" alt="Recruit Profile Image" class="recruit-profile-image"
-                loading="lazy">
+        <section class="recruiting-profile" aria-labelledby="profile-heading">
+            <img src="images/recruit-profile.jpg" alt="Basketball player creating online recruiting profile on laptop"
+                class="recruit-profile-image" width="1200" height="450" loading="lazy">
             <div class="profile-text">
-                <h2>Recruiting Profile</h2>
+                <h2 id="profile-heading">Recruiting Profile</h2>
                 <p>Basketball recruiting is competitive and requires you to get access to coaches, schools, and teams.
                     This is where <strong>Flight 13</strong> provide you with a competitive edge and 10x your chances of
                     getting recruited.
                     We can connect you with the basketball world to help you get exposed and maximize your potential
-                    with endless opportunities. <a href="join.html" class="cta-link">click here</a>.</p>
+                    with endless opportunities.
+                    <a href="join.html" class="cta-link"
+                        aria-label="Create your basketball recruiting profile now">Create your recruiting profile
+                        now</a>.
+                </p>
             </div>
+        </section>
     </main>
 
-    <footer>
-        <p>&copy; <span id="year"></span> Flight 13. All rights reserved.</p>
-        <p>Chut Achol | WDD 231</p>
-        <p>Last Updated: <span id="last-modified"></span></p>
+    <footer role="contentinfo">
+        <div class="footer-content">
+            <p>&copy; <span id="year"></span> Flight 13. All rights reserved.</p>
+            <p>Chut Achol | WDD 231</p>
+            <p>Last Updated: <span id="last-modified"></span></p>
+        </div>
 
         <!-- Social Media Links -->
         <div class="social-media">
-            <a href="https://www.facebook.com" target="_blank" class="social-icon">
-                <img src="images/facebook.png" alt="Facebook">
+            <a href="https://www.facebook.com" target="_blank" class="social-icon" aria-label="Follow us on Facebook">
+                <img src="images/facebook.png" alt="Facebook icon" width="30" height="30" loading="lazy">
             </a>
-            <a href="https://www.instagram.com" target="_blank" class="social-icon">
-                <img src="images/instagram.jpeg" alt="Instagram">
+            <a href="https://www.instagram.com" target="_blank" class="social-icon" aria-label="Follow us on Instagram">
+                <img src="images/instagram.jpeg" alt="Instagram icon" width="30" height="30" loading="lazy">
             </a>
-            <a href="https://www.twitter.com" target="_blank" class="social-icon">
-                <img src="images/twitter.jpeg" alt="Twitter">
+            <a href="https://www.twitter.com" target="_blank" class="social-icon" aria-label="Follow us on Twitter">
+                <img src="images/twitter.jpeg" alt="Twitter icon" width="30" height="30" loading="lazy">
             </a>
         </div>
     </footer>
 
-    <script src="scripts/project.js"></script>
+    <script src="scripts/project.js" defer></script>
 </body>
 
 </html>

@@ -4,95 +4,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Join Flight 13 and become part of a thriving basketball network.">
+    <meta name="description"
+        content="Join Flight 13 and become part of a thriving basketball network. Create your player, coach, or team profile today.">
+    <meta name="keywords"
+        content="join Flight 13, basketball registration, player profile, coach registration, team registration">
     <meta name="author" content="Chut Achol">
+    <meta name="robots" content="index, follow">
 
-    <title>Join Us - Flight 13</title>
+    <title>Join Us - Flight 13 | Basketball Recruitment Platform</title>
 
-    <meta property="og:title" content="Flight 13 Join-us page">
+    <meta property="og:title" content="Flight 13 - Join Our Basketball Network">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://chutachol.github.io/wdd231/project/images/ballerlogo.jpg">
     <meta property="og:url" content="https://chutachol.github.io/wdd231/project/join.html">
+    <meta property="og:description" content="Join Flight 13 and connect with basketball opportunities worldwide.">
 
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Flight 13 - Join Us">
+    <meta name="twitter:description" content="Join Flight 13 and connect with basketball opportunities worldwide.">
+    <meta name="twitter:image" content="https://chutachol.github.io/wdd231/project/images/ballerlogo.jpg">
+
+    <link rel="canonical" href="https://chutachol.github.io/wdd231/project/join.html">
     <link rel="icon" href="images/favicon.ico">
 
     <link rel="stylesheet" href="styles/styleproject.css">
 </head>
 
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <header>
+    <header role="banner">
         <div class="left-section">
-            <img src="images/ballerlogo.jpg" alt="Flight 13 Logo" class="logo">
-            <button id="menu-toggle" class="hamburger">&#9776;</button>
+            <img src="images/ballerlogo.jpg" alt="Flight 13 Basketball Logo" class="logo" width="60" height="60"
+                loading="eager">
+            <button id="menu-toggle" class="hamburger" aria-label="Toggle navigation menu"
+                aria-expanded="false">&#9776;</button>
         </div>
         <h1 class="site-title">Join Us - Flight 13</h1>
-        <nav>
+        <nav role="navigation" aria-label="Main navigation">
             <ul class="navigation">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="join.html" class="active">Join</a></li>
+                <li><a href="join.html" class="active" aria-current="page">Join</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="join-container">
+    <main id="main-content" class="join-container" role="main">
         <h2>Join Flight 13</h2>
         <p>Take your basketball career to the next level by joining our elite network.</p>
 
-        <form id="joinForm" method="post" action="thankyou.html">
-            <label for="first-name">First Name:</label>
-            <input type="text" id="first-name" name="first-name" autocomplete="given-name"
-                placeholder="Enter your first name" required>
+        <form id="joinForm" method="post" action="thankyou.html" novalidate>
+            <div class="form-group">
+                <label for="first-name">First Name <span aria-hidden="true">*</span></label>
+                <input type="text" id="first-name" name="first-name" autocomplete="given-name"
+                    placeholder="Enter your first name" required aria-required="true">
+            </div>
 
-            <label for="last-name">Last Name:</label>
-            <input type="text" id="last-name" name="last-name" autocomplete="family-name"
-                placeholder="Enter your last name" required>
+            <div class="form-group">
+                <label for="last-name">Last Name <span aria-hidden="true">*</span></label>
+                <input type="text" id="last-name" name="last-name" autocomplete="family-name"
+                    placeholder="Enter your last name" required aria-required="true">
+            </div>
 
-            <label for="email">Email Address:</label>
-            <input type="email" id="email" name="email" autocomplete="email" placeholder="Enter your email address"
-                required>
+            <div class="form-group">
+                <label for="email">Email Address <span aria-hidden="true">*</span></label>
+                <input type="email" id="email" name="email" autocomplete="email" placeholder="Enter your email address"
+                    required aria-required="true">
+            </div>
 
-            <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="Enter your phone number" required
-                pattern="[0-9]{10}">
+            <div class="form-group">
+                <label for="phone">Phone Number <span aria-hidden="true">*</span></label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="Enter your phone number"
+                    required pattern="[0-9]{10}" aria-required="true" aria-label="Phone number, 10 digits">
+            </div>
 
-            <label for="membership">Choose Membership Level:</label>
-            <select id="membership" name="membership" required>
-                <option value="player">Player Membership</option>
-                <option value="coach">Coach Membership</option>
-                <option value="team">Team Membership</option>
-                <option value="scout">Scout Membership</option>
-            </select>
+            <div class="form-group">
+                <label for="membership">Choose Membership Level <span aria-hidden="true">*</span></label>
+                <select id="membership" name="membership" required aria-required="true">
+                    <option value="">Select membership type</option>
+                    <option value="player">Player Membership</option>
+                    <option value="coach">Coach Membership</option>
+                    <option value="team">Team Membership</option>
+                    <option value="scout">Scout Membership</option>
+                </select>
+            </div>
 
-            <label for="bio">Tell us about yourself:</label>
-            <textarea id="bio" name="bio" rows="4" autocomplete="off" placeholder="Tell us about yourself"></textarea>
+            <div class="form-group">
+                <label for="bio">Tell us about yourself</label>
+                <textarea id="bio" name="bio" rows="4" autocomplete="off"
+                    placeholder="Tell us about your basketball experience, goals, and aspirations"></textarea>
+            </div>
 
-            <button type="submit">Join Now</button>
+            <button type="submit" aria-label="Submit join form">Join Now</button>
         </form>
     </main>
 
-    <footer>
-        <p>&copy; <span id="year"></span> Flight 13. All rights reserved.</p>
-        <p>Chut Achol | WDD 231</p>
-        <p>Last Updated: <span id="last-modified"></span></p>
+    <footer role="contentinfo">
+        <div class="footer-content">
+            <p>&copy; <span id="year"></span> Flight 13. All rights reserved.</p>
+            <p>Chut Achol | WDD 231</p>
+            <p>Last Updated: <span id="last-modified"></span></p>
+        </div>
 
         <!-- Social Media Links -->
         <div class="social-media">
-            <a href="https://www.facebook.com" target="_blank" class="social-icon">
-                <img src="images/facebook.png" alt="Facebook">
+            <a href="https://www.facebook.com" target="_blank" class="social-icon" aria-label="Follow us on Facebook">
+                <img src="images/facebook.png" alt="Facebook icon" width="30" height="30" loading="lazy">
             </a>
-            <a href="https://www.instagram.com" target="_blank" class="social-icon">
-                <img src="images/instagram.jpeg" alt="Instagram">
+            <a href="https://www.instagram.com" target="_blank" class="social-icon" aria-label="Follow us on Instagram">
+                <img src="images/instagram.jpeg" alt="Instagram icon" width="30" height="30" loading="lazy">
             </a>
-            <a href="https://www.twitter.com" target="_blank" class="social-icon">
-                <img src="images/twitter.jpeg" alt="Twitter">
+            <a href="https://www.twitter.com" target="_blank" class="social-icon" aria-label="Follow us on Twitter">
+                <img src="images/twitter.jpeg" alt="Twitter icon" width="30" height="30" loading="lazy">
             </a>
         </div>
     </footer>
 
-    <script src="scripts/project.js"></script>
+    <script src="scripts/project.js" defer></script>
 
 </body>
 

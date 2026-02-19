@@ -1,94 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Welcome to Flight 13. Learn about the program. ">
+    <meta name="description" content="Learn about Flight 13 - Premier basketball platform connecting players, coaches, and teams for recruitment and development opportunities worldwide.">
+    <meta name="keywords" content="basketball recruiting platform, about Flight 13, basketball connection, player development">
     <meta name="author" content="Chut Achol">
-    <title>About - Flight 13</title>
-
-    <meta property="og:title" content="Flight 13 About-us page">
+    <meta name="robots" content="index, follow">
+    
+    <meta property="og:title" content="Flight 13 - About Us | Basketball Recruitment Platform">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://chutachol.github.io/wdd231/project/images/ballerlogo.jpg">
     <meta property="og:url" content="https://chutachol.github.io/wdd231/project/about.html">
-
+    <meta property="og:description" content="Learn about Flight 13 - Connecting basketball talent with opportunities worldwide.">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Flight 13 - About Us">
+    <meta name="twitter:description" content="Learn about Flight 13 - Connecting basketball talent with opportunities worldwide.">
+    <meta name="twitter:image" content="https://chutachol.github.io/wdd231/project/images/ballerlogo.jpg">
+    
+    <link rel="canonical" href="https://chutachol.github.io/wdd231/project/about.html">
     <link rel="icon" href="images/favicon.ico">
+
+    <title>About Us - Flight 13 | Basketball Recruitment Platform</title>
 
     <link rel="stylesheet" href="styles/styleproject.css">
 </head>
-
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <header>
+    <header role="banner">
         <div class="left-section">
-            <img src="images/ballerlogo.jpg" alt="Flight 13 Logo" class="logo">
-            <button id="menu-toggle" class="hamburger">&#9776;</button>
+            <img src="images/ballerlogo.jpg" alt="Flight 13 Basketball Logo" class="logo" width="60" height="60" loading="eager">
+            <button id="menu-toggle" class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
         </div>
         <h1 class="site-title">About - Flight 13</h1>
-        <nav>
+        <nav role="navigation" aria-label="Main navigation">
             <ul class="navigation">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="about.html" class="active" aria-current="page">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="join.html">Join</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-
+    <main id="main-content" role="main">
+    
         <!-- Who We Are Section -->
-        <section class="who-we-are">
-            <h2>Who We Are</h2>
+        <section class="who-we-are" aria-labelledby="who-heading">
+            <h2 id="who-heading">Who We Are</h2>
             <p>
-                Flight 13 is a platform that uses tech and guidance to help players, coaches, schools, and professional
-                teams
-                to connect with each other so that they maximize each other's values in the world of basketball.
-                Our experienced recruiters give personalized consulting to players, coaches, schools, and professional
-                teams, while
+                Flight 13 is a platform that uses technology and guidance to help players, coaches, schools, and professional teams 
+                to connect with each other so that they maximize each other's values in the world of basketball. 
+                Our experienced recruiters give personalized consulting to players, coaches, schools, and professional teams, while 
                 our online program platform empowers them to connect with each other.
             </p>
             <p>
-                Known as a "must-have" recruiting platform, with over 1,000 individuals in the basketball world using it
-                to find their needs
-                in basketball. Since 2024, Flight 13 has provided connections among players and coaches around the
-                world,
-                recruiting advice, and an extensive set of tools and services that help on their mission to play their
-                favorite sport, Basketball.
+                Known as a "must-have" recruiting platform, with over 1,000 individuals in the basketball world using it to find their needs 
+                in basketball. Since 2024, Flight 13 has provided connections among players and coaches around the world, 
+                recruiting advice, and an extensive set of tools and services that help on their mission to play their favorite sport, Basketball.
             </p>
         </section>
 
-        <section class="Featured">
-            <h2>Featured Members</h2>
+        <section class="Featured" aria-labelledby="featured-heading">
+            <h2 id="featured-heading">Featured Members</h2>
             <div id="Featured-cards">
-                <!-- Feautured cards will load dynamically -->
+                <!-- Featured cards will load dynamically -->
             </div>
         </section>
 
     </main>
 
-    <footer>
-        <p>&copy; <span id="year"></span> Flight 13. All rights reserved.</p>
-        <p>Chut Achol | WDD 231</p>
-        <p>Last Updated: <span id="last-modified"></span></p>
+    <footer role="contentinfo">
+        <div class="footer-content">
+            <p>&copy; <span id="year"></span> Flight 13. All rights reserved.</p>
+            <p>Chut Achol | WDD 231</p>
+            <p>Last Updated: <span id="last-modified"></span></p>
+        </div>
 
         <!-- Social Media Links -->
         <div class="social-media">
-            <a href="https://www.facebook.com" target="_blank" class="social-icon">
-                <img src="images/facebook.png" alt="Facebook">
+            <a href="https://www.facebook.com" target="_blank" class="social-icon" aria-label="Follow us on Facebook">
+                <img src="images/facebook.png" alt="Facebook icon" width="30" height="30" loading="lazy">
             </a>
-            <a href="https://www.instagram.com" target="_blank" class="social-icon">
-                <img src="images/instagram.jpeg" alt="Instagram">
+            <a href="https://www.instagram.com" target="_blank" class="social-icon" aria-label="Follow us on Instagram">
+                <img src="images/instagram.jpeg" alt="Instagram icon" width="30" height="30" loading="lazy">
             </a>
-            <a href="https://www.twitter.com" target="_blank" class="social-icon">
-                <img src="images/twitter.jpeg" alt="Twitter">
+            <a href="https://www.twitter.com" target="_blank" class="social-icon" aria-label="Follow us on Twitter">
+                <img src="images/twitter.jpeg" alt="Twitter icon" width="30" height="30" loading="lazy">
             </a>
         </div>
     </footer>
 
-    <script src="scripts/project.js"></script>
+    <script src="scripts/project.js" defer></script>
 
 </body>
-
 </html>

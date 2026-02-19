@@ -4,25 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Thank you for joining Flight 13!">
+    <meta name="description"
+        content="Thank you for joining Flight 13! Your basketball recruitment profile has been submitted successfully.">
+    <meta name="keywords" content="thank you, Flight 13, registration complete, basketball network">
     <meta name="author" content="Chut Achol">
+    <meta name="robots" content="noindex, follow">
 
-    <title>Thank You - Flight 13</title>
+    <title>Thank You - Flight 13 | Registration Complete</title>
 
+    <meta property="og:title" content="Flight 13 - Thank You">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://chutachol.github.io/wdd231/project/images/ballerlogo.jpg">
+    <meta property="og:url" content="https://chutachol.github.io/wdd231/project/thankyou.html">
+
+    <link rel="canonical" href="https://chutachol.github.io/wdd231/project/thankyou.html">
     <link rel="icon" href="images/favicon.ico">
 
     <link rel="stylesheet" href="styles/styleproject.css">
 </head>
 
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <header>
+    <header role="banner">
         <div class="left-section">
-            <img src="images/ballerlogo.jpg" alt="Flight 13 Logo" class="logo">
-            <button id="menu-toggle" class="hamburger">&#9776;</button>
+            <img src="images/ballerlogo.jpg" alt="Flight 13 Basketball Logo" class="logo" width="60" height="60"
+                loading="eager">
+            <button id="menu-toggle" class="hamburger" aria-label="Toggle navigation menu"
+                aria-expanded="false">&#9776;</button>
         </div>
         <h1 class="site-title">Thank You - Flight 13</h1>
-        <nav>
+        <nav role="navigation" aria-label="Main navigation">
             <ul class="navigation">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -31,37 +43,41 @@
             </ul>
         </nav>
     </header>
-    <main class="thankyou-container">
+
+    <main id="main-content" class="thankyou-container" role="main">
         <h2>Thank You for Joining!</h2>
         <p>Your application has been submitted successfully. We will review your information and get back to you soon.
         </p>
         <p>Meanwhile, feel free to explore more on our platform:</p>
 
         <div class="thankyou-links">
-            <a href="index.html" class="button">Return Home</a>
+            <a href="index.html" class="button" aria-label="Return to home page">Return Home</a>
+            <a href="about.html" class="button" aria-label="Learn more about Flight 13">Learn More</a>
         </div>
     </main>
 
-    <footer>
-        <p>&copy; <span id="year"></span> Flight 13. All rights reserved.</p>
-        <p>Chut Achol | WDD 231</p>
-        <p>Last Updated: <span id="last-modified"></span></p>
+    <footer role="contentinfo">
+        <div class="footer-content">
+            <p>&copy; <span id="year"></span> Flight 13. All rights reserved.</p>
+            <p>Chut Achol | WDD 231</p>
+            <p>Last Updated: <span id="last-modified"></span></p>
+        </div>
 
         <!-- Social Media Links -->
         <div class="social-media">
-            <a href="https://www.facebook.com" target="_blank" class="social-icon">
-                <img src="images/facebook.png" alt="Facebook">
+            <a href="https://www.facebook.com" target="_blank" class="social-icon" aria-label="Follow us on Facebook">
+                <img src="images/facebook.png" alt="Facebook icon" width="30" height="30" loading="lazy">
             </a>
-            <a href="https://www.instagram.com" target="_blank" class="social-icon">
-                <img src="images/instagram.jpeg" alt="Instagram">
+            <a href="https://www.instagram.com" target="_blank" class="social-icon" aria-label="Follow us on Instagram">
+                <img src="images/instagram.jpeg" alt="Instagram icon" width="30" height="30" loading="lazy">
             </a>
-            <a href="https://www.twitter.com" target="_blank" class="social-icon">
-                <img src="images/twitter.jpeg" alt="Twitter">
+            <a href="https://www.twitter.com" target="_blank" class="social-icon" aria-label="Follow us on Twitter">
+                <img src="images/twitter.jpeg" alt="Twitter icon" width="30" height="30" loading="lazy">
             </a>
         </div>
     </footer>
 
-    <script src="scripts/project.js"></script>
+    <script src="scripts/project.js" defer></script>
 
 </body>
 

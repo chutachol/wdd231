@@ -4,40 +4,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact Flight 13 for inquiries, partnerships, and recruitment opportunities.">
+    <meta name="description"
+        content="Contact Flight 13 for inquiries, partnerships, and recruitment opportunities. We're here to help you connect with basketball opportunities.">
+    <meta name="keywords" content="contact Flight 13, basketball inquiries, recruitment partnerships, contact us">
     <meta name="author" content="Chut Achol">
+    <meta name="robots" content="index, follow">
 
-    <title>Contact Us - Flight 13</title>
+    <title>Contact Us - Flight 13 | Basketball Recruitment Platform</title>
 
-    <meta property="og:title" content="Flight 13 Contact-us page">
+    <meta property="og:title" content="Flight 13 - Contact Us">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://chutachol.github.io/wdd231/project/images/ballerlogo.jpg">
     <meta property="og:url" content="https://chutachol.github.io/wdd231/project/contact.html">
+    <meta property="og:description" content="Get in touch with Flight 13 for basketball recruitment opportunities.">
 
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Flight 13 - Contact Us">
+    <meta name="twitter:description" content="Get in touch with Flight 13 for basketball recruitment opportunities.">
+    <meta name="twitter:image" content="https://chutachol.github.io/wdd231/project/images/ballerlogo.jpg">
+
+    <link rel="canonical" href="https://chutachol.github.io/wdd231/project/contact.html">
     <link rel="icon" href="images/favicon.ico">
 
     <link rel="stylesheet" href="styles/styleproject.css">
 </head>
 
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <header>
+    <header role="banner">
         <div class="left-section">
-            <img src="images/ballerlogo.jpg" alt="Flight 13 Logo" class="logo">
-            <button id="menu-toggle" class="hamburger">&#9776;</button>
+            <img src="images/ballerlogo.jpg" alt="Flight 13 Basketball Logo" class="logo" width="60" height="60"
+                loading="eager">
+            <button id="menu-toggle" class="hamburger" aria-label="Toggle navigation menu"
+                aria-expanded="false">&#9776;</button>
         </div>
         <h1 class="site-title">Contact Us - Flight 13</h1>
-        <nav>
+        <nav role="navigation" aria-label="Main navigation">
             <ul class="navigation">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
                 <li><a href="join.html">Join</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="contact-container">
+    <main id="main-content" class="contact-container" role="main">
         <h2>Contact Us</h2>
         <p>We'd love to hear from you! Whether you have questions, need assistance, or want to join our network, reach
             out to us.</p>
@@ -53,51 +66,60 @@
             </div>
             <div class="contact-info">
                 <h3>✉️ Email Us</h3>
-                <p><a href="mailto:info@flight13.com">info@flight13.com</a></p>
+                <p><a href="mailto:info@flight13.com" aria-label="Send email to info@flight13.com">info@flight13.com</a>
+                </p>
             </div>
         </div>
 
-        <section class="contact-form">
-            <h2>Send Us a Message</h2>
-            <form method="post" action="thankyou.html">
-                <label for="name">Full Name:</label>
-                <input type="text" id="name" name="name" autocomplete="name" placeholder="Enter your full name"
-                    required>
+        <section class="contact-form" aria-labelledby="form-heading">
+            <h2 id="form-heading">Send Us a Message</h2>
+            <form method="post" action="thankyou.html" novalidate>
+                <div class="form-group">
+                    <label for="name">Full Name <span aria-hidden="true">*</span></label>
+                    <input type="text" id="name" name="name" autocomplete="name" placeholder="Enter your full name"
+                        required aria-required="true">
+                </div>
 
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" autocomplete="email" placeholder="Enter your email address"
-                    required>
+                <div class="form-group">
+                    <label for="email">Email Address <span aria-hidden="true">*</span></label>
+                    <input type="email" id="email" name="email" autocomplete="email"
+                        placeholder="Enter your email address" required aria-required="true">
+                </div>
 
-                <label for="message">Your Message:</label>
-                <textarea id="message" name="message" rows="5" autocomplete="off" placeholder="Type your message here"
-                    required></textarea>
+                <div class="form-group">
+                    <label for="message">Your Message <span aria-hidden="true">*</span></label>
+                    <textarea id="message" name="message" rows="5" autocomplete="off"
+                        placeholder="Type your message here" required aria-required="true"></textarea>
+                </div>
 
-                <button type="submit">Send Message</button>
-                <button type="reset">Clear Form</button>
+                <button type="submit" aria-label="Send message">Send Message</button>
+                <button type="reset" aria-label="Clear form">Clear Form</button>
             </form>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; <span id="year"></span> Flight 13. All rights reserved.</p>
-        <p>Chut Achol | WDD 231</p>
-        <p>Last Updated: <span id="last-modified"></span></p>
+    <footer role="contentinfo">
+        <div class="footer-content">
+            <p>&copy; <span id="year"></span> Flight 13. All rights reserved.</p>
+            <p>Chut Achol | WDD 231</p>
+            <p>Last Updated: <span id="last-modified"></span></p>
+        </div>
 
         <!-- Social Media Links -->
         <div class="social-media">
-            <a href="https://www.facebook.com" target="_blank" class="social-icon">
-                <img src="images/facebook.png" alt="Facebook">
+            <a href="https://www.facebook.com" target="_blank" class="social-icon" aria-label="Follow us on Facebook">
+                <img src="images/facebook.png" alt="Facebook icon" width="30" height="30" loading="lazy">
             </a>
-            <a href="https://www.instagram.com" target="_blank" class="social-icon">
-                <img src="images/instagram.jpeg" alt="Instagram">
+            <a href="https://www.instagram.com" target="_blank" class="social-icon" aria-label="Follow us on Instagram">
+                <img src="images/instagram.jpeg" alt="Instagram icon" width="30" height="30" loading="lazy">
             </a>
-            <a href="https://www.twitter.com" target="_blank" class="social-icon">
-                <img src="images/twitter.jpeg" alt="Twitter">
+            <a href="https://www.twitter.com" target="_blank" class="social-icon" aria-label="Follow us on Twitter">
+                <img src="images/twitter.jpeg" alt="Twitter icon" width="30" height="30" loading="lazy">
             </a>
         </div>
     </footer>
 
-    <script src="scripts/project.js"></script>
+    <script src="scripts/project.js" defer></script>
 
 </body>
 
